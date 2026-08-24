@@ -17,5 +17,21 @@ import { WaitlistSection } from "@/components/proofoya/WaitlistSection";
 
 export default function Home() {
   const scrollToWaitlist = () => document.querySelector("#waitlist")?.scrollIntoView({ behavior: "smooth" });
-  return <div id="top" className="site-shell"><Header onWaitlist={scrollToWaitlist} /><main><HeroSection onWaitlist={scrollToWaitlist} /><ProblemSection /><StepsSection /><FeaturesSection /><CreativesSection /><AfricaSection /><GuaranteeSection /><ComparisonSection /><WaitlistSection /></main><Footer onWaitlist={scrollToWaitlist} /></div>;
+  return (
+    <div id="top" className="site-shell">
+      <Header onWaitlist={scrollToWaitlist} />
+      <main>
+        <HeroSection onWaitlist={scrollToWaitlist} />
+        <ProblemSection />
+        <StepsSection />
+        <FeaturesSection />
+        <CreativesSection />
+        <AfricaSection />
+        <GuaranteeSection />
+        <ComparisonSection />
+        <WaitlistSection />
+      </main>
+      <Footer onWaitlist={scrollToWaitlist} />
+    </div>
+  );
 }

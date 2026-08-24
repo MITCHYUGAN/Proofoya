@@ -15,5 +15,9 @@ export function revealProps(delay = 0) {
 type RevealProps = HTMLMotionProps<"div"> & { children: ReactNode; delay?: number };
 
 export function Reveal({ children, delay = 0, ...props }: RevealProps) {
-  return <motion.div {...revealProps(delay)} {...props}>{children}</motion.div>;
+  return (
+    <motion.div {...revealProps(delay)} {...props}>
+      {children}
+    </motion.div>
+  );
 }
